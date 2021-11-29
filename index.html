@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Forcast</title>
+    <!-- Font-Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body onload="weather()">
+  <div class="search">
+    <div class="input-group">
+      <input type="text"id="search-bar" class="form-control" placeholder="Enter City Name">
+      <div class="input-group-append">
+        <button class="btn btn-sm btn-dark" onclick="city()">Search</button>
+      </div>
+    </div>
+  </div>
+  <div id="alert">
+
+  </div>
+<div id="display-img">
+    <div id="weather-detail-block">
+        <div class="location-date-time">
+            <h3>Weather in <span id="city-name"></span></h3>
+            <h6><span class="date-time"><span><span id="time"> </span></span></h6>
+        </div>
+
+        <div class="temprature-display">
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="temprature-head">
+                        <p id="temp"></p>
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="cloud-indicator">
+                        <i class="fas fa-cloud-sun fa-6x"></i>
+                        <p id="cloud"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="low-high">
+          <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  <div class="low-high">
+                      <div class="low">
+                          <p id="low"></p>
+                      </div>
+                  </div>
+                </div>
+                      <div class="col-sm">
+                      <div class="high">
+                          <p id="high"></p>
+                      </div>
+                    </div>
+                  
+               
+              </div>
+            </div>
+      </div> 
+
+        
+            <div class="sunrise-sunset">
+                <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <div class="sunrise">
+                            <p id="rise"><h6></h6></p>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <div class="senset">
+                            <p id="set"><h6></h6></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    
+        <div class="humidity-uv-rainfall-wind">
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm  humid">
+                    <div class="humidity-indicate">
+                        <p>Absolute Humidity g/m3</p>
+                        <h3 id="humidity">63</h3>
+                    </div>
+                  </div>
+                  <div class="col-sm pr-in">
+                    <div class="pressure-index">
+                        <p>Pressure <br> hPa</p>
+                        
+                        <h3 id="pressure">0</h3>
+                    </div>
+                  </div>
+                  <div class="col-sm rain">
+                    <div class="rainfall-probablity">
+                        <p>Rainfall probability in %</p>
+                        <h3 class="rainfall">23%</h3>
+                    </div>
+                  </div>
+                  <div class="col-sm wind-s">
+                    <div class="wind-speed">
+                        <p>Wind Speed (kmph)</p>
+                        <h3 id="wind">11</h3>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

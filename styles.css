@@ -1,0 +1,70 @@
+
+body{
+    background: linear-gradient(to right, #ee7752, #e73c7e, #23a6d5, #23d5ab);   
+    padding-left: 20%;
+}
+.search{
+    margin-left: 150px;
+    margin-top: 50px;
+    width: 50%; 
+}
+.alert-danger{
+    margin-left: 150px; 
+    margin-top: 10px;  
+    width: 50%;
+}
+
+.form-control::placeholder{
+    font-weight: bold;
+    color: black;
+}
+.form-control{
+    background: linear-gradient(to right, #ee7752, #e73c7e, #23a6d5, #23d5ab);   
+}
+#display-img{
+    background-image: url("https://timesofindia.indiatimes.com/photo/72833274.cms");
+    background-repeat: no-repeat;
+    margin-left: 150px;
+    width: 50%;
+    border-radius: 50px;
+}
+#weather-detail-block{
+   margin: 10%;
+   color: whitesmoke;
+}
+.location-date-time{
+    padding: 30px;
+}
+.temprature-display{
+    text-align: center;
+}
+h1{
+    font-size: 5rem;
+}
+#cloud{
+    margin-top: 10px;
+}
+.low, .high, .sunrise, .sunset{
+    text-align: center;
+    font-size: small;
+}
+h5{
+    display: inline-block;
+}
+.sunrise-sunset{
+    padding: 10px;
+    text-align: center;
+}
+.humidity-pressur-rainfall-wind{
+    text-align: center;
+    font-size: small;
+    align-items: center;
+}
+.humidity-indicate,.pressure-index, .rainfall-probablity, .wind-speed{
+    border: solid 1px whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+}
+.humid, .pr-in, .rain, .wind-s{
+    padding: 0px;
+}
