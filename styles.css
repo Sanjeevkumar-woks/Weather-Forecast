@@ -24,8 +24,8 @@ body{
 #display-img{
     background-image: url("https://timesofindia.indiatimes.com/photo/72833274.cms");
     background-repeat: no-repeat;
-    margin-left: 150px;
-    width: 50%;
+    margin-left: 70px;
+    width: 70%;
     border-radius: 50px;
 }
 #weather-detail-block{
