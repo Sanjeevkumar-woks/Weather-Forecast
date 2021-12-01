@@ -45,19 +45,24 @@ function city(){
       `;
     }
     else{
-        url=`https://api.openweathermap.org/data/2.5/weather?q=${city_entered}&lang=en&units=metric&appid=78ea530bcb66434fe3d2276971510974`;
-        weather(url);   
+       let  customuUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city_entered}&lang=en&units=metric&appid=78ea530bcb66434fe3d2276971510974`;
+        weather(customuUrl);   
     } 
 }
 
 //Featching Data
-function weather(){  
-    fetch(url)
+function weather(customuUrl){  
+    fetch(customuUrl)
     .then((res)=>res.json())
     .then((result)=>{
         display(result);        
     })
     .catch(()=>{
+      fetch(url)
+      .then((res)=>res.json())
+      .then((result)=>{
+          display(result);        
+      })
         document.getElementById("alert").innerHTML=`<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>City not found!</strong> Enter a valid City name.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -81,5 +86,7 @@ function display(data){
     document.getElementById("wind").innerText=data.wind.speed;
     document.getElementById("pressure").innerText=data.main.pressure;
 }
+
+
 
 
