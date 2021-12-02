@@ -87,6 +87,14 @@ function display(data){
     document.getElementById("pressure").innerText=data.main.pressure;
 }
 
+//Enter key press eventListner
+var input = document.getElementById("search-bar");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("search-btn").click();
+  }
+});
 
 
 
